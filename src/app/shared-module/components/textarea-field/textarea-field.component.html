@@ -1,0 +1,7 @@
+<div [formGroup]="genericForm" *ngIf="genericForm"  >
+    <mat-form-field class="col-sm-12 col-xs-12 col-md-12 col-lg-12 fixSize  _halfWidth">
+        <div class="form-group">
+            <textarea  matInput formControlName="{{genericData.field}}" placeholder="{{genericData.label}}"></textarea>
+        </div>
+    </mat-form-field>
+</div>

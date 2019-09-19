@@ -1,0 +1,16 @@
+<div  [formGroup]= "genericForm"  class="row" *ngIf=" genericForm" >
+  <div class="col-lg-6 col-md-6 col-xs-12" *ngFor="let data of genericData ; let i  = index" >
+    <app-dropdown-field *ngIf="(data.input == 'radio'|| data.input == 'dropdown' || data.input == 'multiselect' || data.input == 'select'  ) " [genericData]="data" [genericForm]="genericForm" ></app-dropdown-field>
+  
+    <app-text-field  *ngIf="data.input == 'text'" [genericData]="data" [genericForm]="genericForm" ></app-text-field>
+    
+    <app-textarea-field *ngIf="data.input == 'textarea'" [genericData]="data" [genericForm]="genericForm" ></app-textarea-field>
+   
+    <app-number-field *ngIf="data.input == 'number'  " [genericData]="data" [genericForm]="genericForm" ></app-number-field>
+    
+    <app-select-field *ngIf="data.input == 'boolean'  " [genericData]="data" [genericForm]="genericForm" ></app-select-field>
+
+  </div> 
+
+
+</div>

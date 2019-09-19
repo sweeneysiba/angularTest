@@ -1,0 +1,15 @@
+
+<h2>Angular test </h2>
+
+<div class="flex">
+    <app-dynamic-form [genericData]="flexiConfig.items" [genericForm]="genericForm"></app-dynamic-form>
+    <button mat-raised-button color="primary" [disabled]="!genericForm.valid" (click)="onSubmit()">Primary</button>
+</div>
+
+<h5>*NOTE : fill all the field to submit the form</h5>
+
+<div *ngIf="answerForm">
+    <div *ngFor ="let key of keysOfObject(answerForm)">
+        {{key}} : {{answerForm[key]}}
+    </div>
+</div>
